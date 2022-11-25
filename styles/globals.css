@@ -11,9 +11,22 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+/* Header */
+.bgHeader {
+  background-image: url(../public/img/bgHeader.png);
 }
+
+header {
+  width: 1440px;
+  height: 646px;
+}
+
+/* Login */
+.bgLogin {
+  background-image: url(../public/img/bgLogin.png);
+  height: 795px;
+}
+
 
 @media (prefers-color-scheme: dark) {
   html {
