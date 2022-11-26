@@ -1,11 +1,9 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import NavbarHeader from "../src/components/Navbar";
+import LandingPage from "../src/components";
 
 export default function Home() {
   return (
-    <header className="bgHeader pt-3">
-      <NavbarHeader />
-    </header>
+    <LandingPage/>
   );
 }

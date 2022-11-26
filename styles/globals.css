@@ -17,8 +17,72 @@ a {
 }
 
 header {
-  width: 1440px;
   height: 646px;
+}
+
+.btn-me b:hover {
+  color: rgb(99, 99, 99);
+}
+
+/* Footer */
+footer {
+  background-color: #5e5e5e;
+}
+
+.nav_footer a {
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+
+.nav_footer a:hover {
+  color: black;
+}
+.sosmed p {
+  color: white;
+  font-weight: bold;
+}
+.sosmed a {
+  padding-left: 8px;
+}
+
+footer .addres {
+  color: white;
+}
+/* end footer */
+/* mobile 360px */
+@media (max-width: 600px) {
+  .contain_navbar nav {
+    margin-left: 30px;
+  }
+  .title-prodak h1 {
+    width: 248px;
+    height: 200px;
+    margin-top: 0;
+  }
+  .title-prodak p {
+    font-family: Helvetica, sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    width: 328px;
+    height: 60px;
+    align-self: stretch;
+  }
+  .title-prodak .button-order {
+    margin: 30px 0 20px 0;
+  }
+  .container .title-image {
+    width: 344px;
+    height: 199px;
+  }
+  /* layanan */
+  .layanan .img-service {
+    width: 252px;
+    margin: 10px 0 0 30px;
+    padding-bottom: 20px;
+  }
 }
 
 /* Login */
@@ -27,6 +91,64 @@ header {
   height: 795px;
 }
 
+/* Fomr Tiket */
+.bgForm {
+  background-image: url(../public/img/bluecloud.png);
+  height: 485px;
+}
+
+/* About Us */
+.bgAboutUs {
+  background-image: url(../public/img/bgAboutUs.png);
+  height: 552px;
+}
+
+/* Grid Custom */
+.parent {
+  display: grid;
+  grid-template-columns: repeat(4, 0.3fr);
+  grid-template-rows: repeat(5, 0.3fr);
+  background-color: rgba(180, 180, 180, 0.452);
+  border-radius: 17px;
+}
+
+.div1 {
+  grid-area: 1 / 1 / 6 / 2;
+  border-top-left-radius: 17px;
+  border-bottom-left-radius: 17px;
+  background-color: rgba(238, 238, 238, 0.856);
+}
+
+.div2 {
+  grid-area: 1 / 2 / 2 / 5;
+  background-color: rgba(138, 138, 138, 0.856);
+  border-top-right-radius: 17px;
+}
+.div3 {
+  grid-area: 2 / 2 / 3 / 5;
+}
+.div4 {
+  grid-area: 3 / 2 / 4 / 3;
+}
+.div5 {
+  grid-area: 3 / 3 / 4 / 4;
+}
+.div6 {
+  grid-area: 3 / 4 / 4 / 5;
+}
+.div7 {
+  grid-area: 4 / 4 / 5 / 5;
+}
+.div8 {
+  grid-area: 5 / 2 / 6 / 3;
+}
+.div9 {
+  grid-area: 5 / 3 / 6 / 4;
+}
+.div10 {
+  grid-area: 5 / 4 / 6 / 5;
+  border-bottom-right-radius: 17px;
+}
 
 @media (prefers-color-scheme: dark) {
   html {

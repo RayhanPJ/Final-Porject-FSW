@@ -1,30 +1,26 @@
 import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Container from "react-bootstrap/Container";
-import NavbarHeader from "../navbar";
+import NavbarHeader from "../Header/Navbars";
+import Link from "next/link";
 // import { GoogleLogin, GoogleOAuthProvider } from "@react-oauth/google";
-// import { Navigate } from "react-router-dom";
 // import jwtDecode from "jwt-decode";
-// import logo from "../../logo.svg";
 
-// async function doLogin({ email, password }) {
-//   // Gunakan endpoint-mu sendiri
-//   const response = await fetch(
-//     "https://challenge-8-be-fsw-production.up.railway.app/api/v1/login/",
-//     {
-//       method: "POST",
-//       headers: {
-//         "Content-Type": "application/json",
-//       },
-//       body: JSON.stringify({
-//         email,
-//         password,
-//       }),
-//     }
-//   );
-//   const data = await response.json();
-//   return data.token;
-// }
+async function doLogin({ email, password }) {
+  // Gunakan endpoint-mu sendiri
+  const response = await fetch("http://localhost:8000/api/v1/login", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      email,
+      password,
+    }),
+  });
+  const data = await response.json();
+  return data.token;
+}
 
 // async function doLoginGoogle(res, email) {
 //   // Gunakan endpoint-mu sendiri
@@ -47,25 +43,24 @@ import NavbarHeader from "../navbar";
 // }
 
 function Login() {
-  // const [email, setEmail] = useState("");
-  // const [password, setPassword] = useState("");
-  // const [isLoggedIn, setIsLoggedIn] = useState(false);
-  // const [isLoading, setIsLoading] = useState(false);
-  // const token = localStorage.getItem("token");
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   // const GOOGLECLIENTID = "1075166577960-qiqbp7khn8e0e50mrgf01hcci3kognqf.apps.googleusercontent.com";
 
-  // useEffect(() => {
-  //   setIsLoggedIn(!!token);
-  // }, [token]);
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    setIsLoggedIn(!!token);
+  }, []);
 
-  // function handleSubmit(e) {
-  //   setIsLoading(true);
-  //   e.preventDefault();
-  //   doLogin({ email, password })
-  //     .then((token) => localStorage.setItem("token", token))
-  //     .catch((err) => err.message)
-  //     .finally(() => setIsLoading(false));
-  // }
+  function handleSubmit(e) {
+    setIsLoading(true);
+    e.preventDefault();
+    doLogin({ username, password })
+      .then((token) => localStorage.setItem("token", token))
+      .catch((err) => err.message);
+  }
 
   // const haldleSuccessGoogle = (response) => {
   //   const userData = jwtDecode(response.credential);
@@ -91,9 +86,9 @@ function Login() {
 
   return (
     <div className="bgLogin">
-      <NavbarHeader/>
-      <br/>
-      <br/>
+      <NavbarHeader />
+      <br />
+      <br />
       <Container>
         <div className="row">
           <div className="col-7"></div>
@@ -102,29 +97,38 @@ function Login() {
             <p>
               Belum punya akun? <a href="#">Daftar disini</a>
             </p>
-            <form>
+            <form onSubmit={handleSubmit}>
               <div className="mb-3 h6">
-                <label htmlFor="exampleFormControlInput1" className="form-label">
+                <label htmlFor="email" className="form-label">
                   Email address
                 </label>
                 <input
                   type="email"
                   className="form-control bg-transparent formInput"
-                  id="exampleFormControlInput1"
+                  id="email"
+                  onChange={(e) => setUsername(e.target.value)}
+                  value={username}
                   placeholder="your email"
                 />
               </div>
               <div className="mb-3 h6">
-                <label htmlFor="inputPassword" className="col-sm-2 col-form-label">
+                <label htmlFor="passwd" className="col-sm-2 col-form-label">
                   Password
                 </label>
                 <input
                   type="password"
                   className="form-control bg-transparent formInput"
-                  id="inputPassword"
+                  id="password"
+                  onChange={(e) => setPassword(e.target.value)}
+                  value={password}
                   placeholder="your password"
                 />
               </div>
+              <a href="/" className="forgot">
+                Back to the site
+              </a>
+              <br />
+              <br />
               <div className="d-grid gap-2">
                 <button
                   className="btn btn-light shadow py-2 mb-5 bg-body rounded"
@@ -136,6 +140,7 @@ function Login() {
               <p>Atau masuk dengan</p>
               <div className="d-grid gap-2"></div>
             </form>
+            <Link href="/"/>
           </div>
         </div>
       </Container>

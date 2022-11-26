@@ -33,7 +33,7 @@ function NavbarHeader() {
         </Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
-          <Nav className="ms-auto d-flex align-items-center h5">
+          <Nav className="ms-auto d-flex align-items-center fs-5">
             <Nav.Link className="text-dark" href="/">Beranda</Nav.Link>
             <Nav.Link className="mx-3 text-dark" href="#features">Book</Nav.Link>
             <Nav.Link className="mx-3 text-dark" href="#pricing">About Us</Nav.Link>
