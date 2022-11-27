@@ -12,7 +12,7 @@ const AboutUs = () => {
           className="card text-center bg-transparent"
           style={{
             position: "relative",
-            top: "200px",
+            top: "180px",
             width: "100%",
             border: "none",
           }}
@@ -40,10 +40,19 @@ const AboutUs = () => {
             <Collapse in={open}>
               <div id="AboutUsText">
                 <p className="text-light">
-                  Anim pariatur cliche reprehenderit, enim eiusmod high life
-                  accusamus terry richardson ad squid. Nihil anim keffiyeh
-                  helvetica, craft beer labore wes anderson cred nesciunt
-                  sapiente ea proident.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+                  officia odio commodi praesentium perferendis, exercitationem
+                  nemo quisquam cumque tenetur soluta ratione sint, enim eaque
+                  dolor aut itaque ipsum excepturi tempore doloribus architecto
+                  error doloremque voluptates? Voluptates praesentium commodi
+                  porro non deleniti, molestiae, unde neque eaque laudantium
+                  tempora blanditiis enim. Ab possimus, maxime neque ratione
+                  reprehenderit accusantium eos quam dolore aliquid fuga est
+                  nihil a officia quaerat quibusdam, pariatur at illo aut?
+                  Tenetur officiis aliquam porro quas a, nam ea nisi in quaerat
+                  rerum ipsam similique sint aliquid consequatur est ipsum
+                  voluptatibus commodi temporibus corrupti consectetur esse
+                  expedita pariatur accusantium illum.
                 </p>
               </div>
             </Collapse>

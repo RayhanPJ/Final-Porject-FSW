@@ -26,9 +26,6 @@ function Footer() {
             <a href="tes">
               <img src="/img/icon_mail.png" alt="" />
             </a>
-            <a href="tes">
-              <img src="/img/icon_twitch.png" alt="" />
-            </a>
           </div>
           {/* <!-- navigation --> */}
           <div className="col">
@@ -59,36 +56,3 @@ function Footer() {
 }
 
 export default Footer;
-
-{
-  /* <Navbar>
-      <Container>
-        <Navbar.Brand className="d-flex align-items-center" href="/">
-          <img
-            src="img/GoTravel.png"
-            className="d-inline-block align-top"
-            alt="React Bootstrap logo"
-          />
-        </Navbar.Brand>
-        <Navbar.Toggle />
-        <Navbar.Collapse className="justify-content-end">
-          <Nav className="ms-auto d-flex align-items-center fs-5">
-            <Nav.Link className="text-dark" href="/">Beranda</Nav.Link>
-            <Nav.Link className="mx-3 text-dark" href="#features">Book</Nav.Link>
-            <Nav.Link className="mx-3 text-dark" href="#pricing">About Us</Nav.Link>
-            <Nav.Link className="mx-3 text-dark" href="#pricing">Testimonial</Nav.Link>
-            <Nav.Link className="text-dark" href="/login">
-              <Button
-                size="md"
-                variant="secondary"
-                disabled={isLoading}
-                onClick={!isLoading ? handleClick : null}
-              >
-                {isLoading ? "Loading…" : "Login"}
-              </Button>
-            </Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar> */
-}

@@ -2,22 +2,17 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container } from "react-bootstrap";
 
-const FormTiket = () => {
+const FormInfoTiket = () => {
   const [show, setShow] = useState(true);
   return (
-    <div className="bgForm">
+    <div className="bgFormInfo">
       <main className="py-5 px-5">
         <Container>
-          <div className="parent">
-            <div className="div1 d-flex justify-content-center">
+          <div className="parentInfo">
+            <div className="divInfo1 d-flex justify-content-center">
               <h3 className="text-light">Booking</h3>
             </div>
-            <div className="div2">
-              <a href="/login">
-                <h5>Login</h5>
-              </a>
-            </div>
-            <div className="div3 ">
+            <div className="divInfo2 ">
               <label className="form-label" htmlFor="typeDriver">
                 Dari
               </label>
@@ -33,9 +28,9 @@ const FormTiket = () => {
                 </select>
               </div>
             </div>
-            <div className="div4">
+            <div className="divInfo3">
               <label className="form-label" htmlFor="typeDriver">
-                Dari
+                Ke
               </label>
               <div className="input-group mb-3">
                 <select
@@ -49,8 +44,8 @@ const FormTiket = () => {
                 </select>
               </div>
             </div>
-            <div className="div5">
-              <div className="d-flex">
+            <div className="divInfo4">
+              <div className="d-flex mb-1">
                 <div className="form-check">
                   <input
                     onClick={() => setShow(true)}
@@ -76,9 +71,6 @@ const FormTiket = () => {
                   </label>
                 </div>
               </div>
-              <label className="form-label" htmlFor="typeDriver">
-                Date :
-              </label>
               <div className="input-group mb-3">
                 <input
                   show={show}
@@ -99,35 +91,7 @@ const FormTiket = () => {
                 )}
               </div>
             </div>
-            <div className="div6">
-              <label className="form-label" htmlFor="tipeDriver">
-                Penumpang
-              </label>
-              <input
-                type="number"
-                name="penumpang"
-                id="penumpang"
-                className="form-control bg-transparent border-dark"
-                placeholder="Jumlah Penumpang"
-              />
-            </div>
-            <div className="div7">
-              <label className="form-label" htmlFor="typeDriver">
-                Class
-              </label>
-              <div className="input-group mb-3">
-                <select
-                  id="supir"
-                  name="supir"
-                  className="form-select bg-transparent border-dark"
-                >
-                  <option value="">Pilih Tipe Driver</option>
-                  <option value="true">Dengan Sopir</option>
-                  <option value="false">Tanpa Sopir (Lepas Tangan)</option>
-                </select>
-              </div>
-            </div>
-            <div className="div8 d-grid">
+            <div className="divInfo5 d-grid">
               <div
                 className="d-grid gap-2"
                 style={{ position: "relative", top: "30px" }}
@@ -147,4 +111,4 @@ const FormTiket = () => {
   );
 };
 
-export default FormTiket;
+export default FormInfoTiket;

@@ -2,13 +2,13 @@ import React from "react";
 import FormTiket from "./FormTiket";
 import Testimonial from "./Testimonial";
 import AboutUs from "./AboutUs";
-import InfoPenerbangan from "./InfoPenerbangan";
+import FormInfoTiket from "./FormInfoTiket";
 
 const Main = () => {
   return (
     <div>
       <FormTiket />
-      <InfoPenerbangan />
+      <FormInfoTiket />
       <AboutUs/>
       <Testimonial />
     </div>
