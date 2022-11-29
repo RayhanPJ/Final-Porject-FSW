@@ -6,7 +6,7 @@ import { Container, Navbar, NavbarBrand } from "react-bootstrap";
 
 const PesanTiket = () => {
   return (
-    <div>
+    <div style={{backgroundColor: "#F0F0F0"}}>
       <Header />
       <Container>
         <nav
@@ -58,49 +58,50 @@ const PesanTiket = () => {
             </div>
           </div>
         </nav>
+        {/* data diri */}
         <div className="row">
           <div className="col-lg-8">
-            <h3 style={{borderStyle: "solid"}}>Pemesan</h3>
-            <form style={{borderStyle: "solid"}}>
+            <h3 style={{borderStyle: "solid",backgroundColor: "#ffffff"}}>Pemesan</h3>
+            <form style={{borderStyle: "solid", backgroundColor: "#ffffff"}}>
               <h3>Data Diri</h3>
               <div className="col-lg-12">
                 <label>Nama Lengkap</label><br/>
-                <input type={"text"} style={{width: "200px"}}></input>
+                <input type={"text"} style={{width: "200px", backgroundColor: "#ffffff"}}></input>
               </div>
               <div className="row">
                 <div className="col-lg-4">
                   <label>Kursi</label><br/>
-                  <input type={"text"} style={{width: "140px"}}></input>
+                  <input type={"text"} style={{width: "140px", backgroundColor: "#ffffff"}}></input>
                 </div>
                 <div className="col-lg-4">
                   <label>Makanan</label><br/>
-                  <input type={"text"} style={{width: "140px"}}></input>
+                  <input type={"text"} style={{width: "140px", backgroundColor: "#ffff"}}></input>
                 </div>
                 <div className="col-lg-4">
                   <label>Bagasi</label><br/>
-                  <input type={"text"} style={{width: "140px"}}></input>
+                  <input type={"text"} style={{width: "140px", backgroundColor: "#ffff"}}></input>
                 </div>
               </div>
               <h3 style={{marginTop: "30px"}}>Informasi Kontak</h3>
               <div className="row">
                 <div className="col-lg-6">
                   <label>Email</label><br/>
-                  <input type={"email"}></input><br/>
+                  <input type={"email"} style={{backgroundColor: "#ffff"}}></input><br/>
                   <label>Re-Email</label><br/>
-                  <input type={"email"}></input>
+                  <input type={"email"} style={{backgroundColor: "#ffff"}}></input>
                 </div>
                 <div className="col-lg-6">
                   <label>Home Phone</label><br/>
-                  <input type={"tel"}></input><br/>
+                  <input type={"tel"} style={{backgroundColor: "#ffffff"}}></input><br/>
                   <label>Mobile Phone</label><br/>
-                  <input type={"tel"}></input>
+                  <input type={"tel"} style={{backgroundColor: "#ffffff"}}></input>
                 </div>
               </div>
-              
             </form>
           </div>
+          {/* detail pesanan & total */}
           <div className="col-lg-4">
-            <div style={{borderStyle: "solid"}}>
+            <div style={{borderStyle: "solid", backgroundColor: "#ffffff"}}>
               <p>Penerbangan</p>
               <p>Garuda Airlines</p>
               <p>dd/mm/yy</p>
@@ -115,6 +116,7 @@ const PesanTiket = () => {
           </div>
         </div>
       </Container>
+      {/* footer */}
       <Footer />
     </div>
   );
