@@ -59,9 +59,10 @@ const PesanTiket = () => {
           </div>
         </nav>
         <div className="row">
-          <div className="col-lg-6">
-            <h3>Data Diri</h3>
-            <form>
+          <div className="col-lg-8">
+            <h3 style={{borderStyle: "solid"}}>Pemesan</h3>
+            <form style={{borderStyle: "solid"}}>
+              <h3>Data Diri</h3>
               <div className="col-lg-12">
                 <label>Nama Lengkap</label><br/>
                 <input type={"text"} style={{width: "200px"}}></input>
@@ -80,7 +81,7 @@ const PesanTiket = () => {
                   <input type={"text"} style={{width: "140px"}}></input>
                 </div>
               </div>
-              <h3>Informasi Kontak</h3>
+              <h3 style={{marginTop: "30px"}}>Informasi Kontak</h3>
               <div className="row">
                 <div className="col-lg-6">
                   <label>Email</label><br/>
@@ -89,17 +90,28 @@ const PesanTiket = () => {
                   <input type={"email"}></input>
                 </div>
                 <div className="col-lg-6">
-                  <label>Home Phone</label>
-                  <input type={"tel"}></input>
-                  <label>Mobile Phone</label>
+                  <label>Home Phone</label><br/>
+                  <input type={"tel"}></input><br/>
+                  <label>Mobile Phone</label><br/>
                   <input type={"tel"}></input>
                 </div>
               </div>
               
             </form>
           </div>
-          <div className="col-lg-6">
-
+          <div className="col-lg-4">
+            <div style={{borderStyle: "solid"}}>
+              <p>Penerbangan</p>
+              <p>Garuda Airlines</p>
+              <p>dd/mm/yy</p>
+              <p>Jakarta (JKT) - Bali (DPS)</p>
+              <p>15.30 WIB - 18.00 WIB</p>
+              <p>2 jam 30 menit</p>
+              <p>Tiket Rp 850.000</p>
+              <p>Layanan Rp 250.000</p>
+              <p>Total Rp 1.150.000</p>
+              <button>Lanjut Pembayaran</button>
+            </div>
           </div>
         </div>
       </Container>
