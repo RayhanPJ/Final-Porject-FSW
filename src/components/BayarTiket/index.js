@@ -80,7 +80,7 @@ const BayarTiket = () => {
             </section>
             <h2 style={{ paddingTop: "20px" }}>
               <img
-                src="/img/Vector.png"
+                src="/img/card.png"
                 alt=""
                 style={{ paddingRight: "15px" }}
               />
