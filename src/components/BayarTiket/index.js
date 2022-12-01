@@ -6,7 +6,7 @@ import { Container, Navbar, NavbarBrand } from "react-bootstrap";
 
 const BayarTiket = () => {
   return (
-    <div>
+    <div className="bayarTiket">
       <Header />
       <Container>
         <div className="row" style={{ paddingTop: "10px" }}>
@@ -94,7 +94,7 @@ const BayarTiket = () => {
                 marginLeft: "70px",
                 backgroundColor: "#9f9f9f",
                 borderRadius: "8px",
-              }}
+              }} className="tbayar"
             >
               <p style={{ paddingTop: "20px" }}>
                 Jumlah yang harus di bayar adalah IDR 1,921,020

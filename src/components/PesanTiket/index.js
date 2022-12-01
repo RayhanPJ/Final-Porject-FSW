@@ -6,7 +6,7 @@ import { Container, Navbar, NavbarBrand } from "react-bootstrap";
 
 const PesanTiket = () => {
   return (
-    <div style={{ backgroundColor: "#F0F0F0" }}>
+    <div style={{ backgroundColor: "#F0F0F0" }} className="pesanTiket">
       <Header />
       <Container>
         <nav
@@ -75,7 +75,7 @@ const PesanTiket = () => {
                 ></input> */}
                 <input type="text" id="nama_lengkap" placeholder="Nama lengkap" className="form-control " style={{width: "300px"}}/>
               </div>
-              <div className="row">
+              <div className="row" style={{marginTop: "10px"}}>
                 <div className="col-lg-4">
                   <label>Kursi</label>
                   <br />
@@ -135,9 +135,6 @@ const PesanTiket = () => {
                       style={{ backgroundColor: "#ffff" }}
                     ></input> */}
                     <div className="input-group">
-                      <div class="input-group-addon">
-                        <img src="img/email.png"/>
-                      </div>
                       <input type={"email"} id="email" className="form-control "/>
                     </div>
                   </div>
@@ -166,7 +163,7 @@ const PesanTiket = () => {
           {/* detail pesanan & total */}
           <div className="col-lg-4">
             <div style={{ borderStyle: "solid", backgroundColor: "#ffffff", borderRadius: "6px",marginTop: "50px",padding: "17px" }}>
-              <p style={{textAlign: "center"}}>Penerbangan</p>
+              <p style={{textAlign: "center",fontSize: "20px"}}>Detail Penerbangan</p>
               <p>Garuda Airlines</p>
               <p>dd/mm/yy</p>
               <p style={{margin: "6px 0 15px 0"}}>Jakarta (JKT) - Bali (DPS)</p>
@@ -175,12 +172,20 @@ const PesanTiket = () => {
               <div className="row" style={{marginTop: "10px"}}>
                 <div className="col-lg-6">
                   <p>Tiket</p>
-                  <p>Layanan</p>
-                  <p>Total</p>  
                 </div>
                 <div className="col-lg-6">
                   <p>Rp 850.000</p>
+                </div>
+                <div className="col-lg-6">
+                  <p>Layanan</p>
+                </div>
+                <div className="col-lg-6">
                   <p>Rp 250.000</p>
+                </div>
+                <div className="col-lg-6">
+                  <p>Total</p>
+                </div>
+                <div className="col-lg-6">
                   <p>Rp 1.150.000</p>
                 </div>
               </div>

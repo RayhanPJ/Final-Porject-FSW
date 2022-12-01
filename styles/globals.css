@@ -83,6 +83,18 @@ footer .addres {
     margin: 10px 0 0 30px;
     padding-bottom: 20px;
   }
+  /* bayar tiket */
+  .bayarTiket .tbayar{
+    width: 250px !important;
+  }
+  .bayarTiket .btn_bayar{
+    margin-left: 70px !important;
+  }
+
+  /* pesan tiket */
+  #nama_lengkap{
+    width: "10px" !important;
+  }
 }
 
 /* Login */
