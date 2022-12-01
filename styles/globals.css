@@ -33,6 +33,7 @@ footer {
   text-decoration: none;
   font-weight: bold;
   color: white;
+  line-height: 10px;
 }
 
 .nav_footer a:hover {
@@ -46,8 +47,13 @@ footer {
   padding-left: 8px;
 }
 
-footer .addres {
-  color: white;
+.addres {
+  color: #ffffff !important;
+ 
+  
+}
+.addres p{
+  
 }
 /* end footer */
 /* mobile 360px */
@@ -94,6 +100,10 @@ footer .addres {
   /* pesan tiket */
   #nama_lengkap{
     width: "10px" !important;
+  }
+  /* footer */
+  .nav_footer{
+    margin-top: 10px;
   }
 }
 
