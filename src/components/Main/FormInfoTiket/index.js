@@ -5,7 +5,7 @@ import { Container } from "react-bootstrap";
 const FormInfoTiket = () => {
   const [show, setShow] = useState(true);
   return (
-    <div className="bgFormInfo">
+    <div className="bgFormInfo" id="Booking">
       <main className="py-5 px-5">
         <Container>
           <div className="parentInfo">
