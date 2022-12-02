@@ -54,7 +54,10 @@ const FormInfoTiket = () => {
                     name="flexRadioDefault"
                     id="flexRadioDefault1"
                   />
-                  <label className="form-check-label" htmlFor="flexRadioDefault1">
+                  <label
+                    className="form-check-label"
+                    htmlFor="flexRadioDefault1"
+                  >
                     Sekali Jalan
                   </label>
                 </div>
@@ -66,14 +69,16 @@ const FormInfoTiket = () => {
                     name="flexRadioDefault"
                     id="flexRadioDefault1"
                   />
-                  <label className="form-check-label" htmlFor="flexRadioDefault1">
+                  <label
+                    className="form-check-label"
+                    htmlFor="flexRadioDefault1"
+                  >
                     Pulang Pergi
                   </label>
                 </div>
               </div>
               <div className="input-group mb-3">
                 <input
-                  show={true}
                   type="date"
                   name="date"
                   id="date"
@@ -82,7 +87,6 @@ const FormInfoTiket = () => {
                 />
                 {!show && (
                   <input
-                    show={false}
                     type="date"
                     name="date"
                     id="date"

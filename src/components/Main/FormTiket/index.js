@@ -54,27 +54,31 @@ const FormTiket = () => {
               <div className="d-flex">
                 <div className="form-check">
                   <input
-                    show={true}
                     onClick={() => setShow(true)}
                     className="form-check-input"
                     type="radio"
                     name="flexRadioDefault"
                     id="flexRadioDefault1"
                   />
-                  <label className="form-check-label" htmlFor="flexRadioDefault1">
+                  <label
+                    className="form-check-label"
+                    htmlFor="flexRadioDefault1"
+                  >
                     Sekali Jalan
                   </label>
                 </div>
                 <div className="form-check">
                   <input
-                    show={false}
                     onClick={() => setShow(false)}
                     className="form-check-input"
                     type="radio"
                     name="flexRadioDefault"
                     id="flexRadioDefault1"
                   />
-                  <label className="form-check-label" htmlFor="flexRadioDefault1">
+                  <label
+                    className="form-check-label"
+                    htmlFor="flexRadioDefault1"
+                  >
                     Pulang Pergi
                   </label>
                 </div>
@@ -84,7 +88,6 @@ const FormTiket = () => {
               </label>
               <div className="input-group mb-3">
                 <input
-                  show={true}
                   type="date"
                   name="date"
                   id="date"
