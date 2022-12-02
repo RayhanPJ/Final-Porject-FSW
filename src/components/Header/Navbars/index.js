@@ -4,6 +4,8 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Button from "react-bootstrap/Button";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import Form from "react-bootstrap/Form";
 
 function simulateNetworkRequest() {
   return new Promise((resolve) => setTimeout(resolve, 2000));
@@ -22,7 +24,7 @@ function NavbarHeader() {
 
   const handleClick = () => setLoading(true);
   return (
-    <Navbar>
+    <Navbar expand="lg">
       <Container>
         <Navbar.Brand className="d-flex align-items-center" href="/">
           <img

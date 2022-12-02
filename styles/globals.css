@@ -16,6 +16,15 @@ a {
   background-image: url(../public/img/bgHeader.png);
 }
 
+/* .bgHeader .headerC h3{
+  width: 400px !important;
+  margin-left: 720px;
+}
+.bgHeader .headerC p{
+  width: 350px;
+  margin-left: 770px;
+} */
+
 header {
   height: 646px;
 }
@@ -52,15 +61,21 @@ footer {
  
   
 }
-.addres p{
-  
-}
+
 /* end footer */
 /* mobile 360px */
 @media (max-width: 600px) {
   .contain_navbar nav {
     margin-left: 30px;
   }
+
+  /* header */
+  .bgHeader .containC{
+    
+  }
+
+  
+
   .title-prodak h1 {
     width: 248px;
     height: 200px;
