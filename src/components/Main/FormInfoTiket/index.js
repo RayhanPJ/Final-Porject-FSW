@@ -73,7 +73,7 @@ const FormInfoTiket = () => {
               </div>
               <div className="input-group mb-3">
                 <input
-                  show={show}
+                  show={true}
                   type="date"
                   name="date"
                   id="date"
@@ -82,6 +82,7 @@ const FormInfoTiket = () => {
                 />
                 {!show && (
                   <input
+                    show={false}
                     type="date"
                     name="date"
                     id="date"
