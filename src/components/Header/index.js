@@ -9,8 +9,8 @@ const Header = () => {
       <NavbarHeader />
       <Container>
         <div className="row" style={{position: "relative", top : "150px" }}>
-          <div className="col-7"></div>
-          <div className="col-5 text-end">
+          <div className="col-lg-7"></div>
+          <div className="col-lg-5 text-end col-md-12 headerC">
             <h3>Nikmati Perjalanan Anda Dengan Go Travel !</h3>
             <p>
               Jelajahi dunia yang indah dengan satu sentuhan dengan pesan tiket

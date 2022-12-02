@@ -15,51 +15,20 @@ const BayarTiket = () => {
               class="navbar navbar-expand-lg"
               style={{ backgroundColor: "#4E4E4E" }}
             >
-              <div class="container-fluid">
-                <a class="navbar-brand" href="#" style={{ color: "#FFFFFF" }}>
-                  Booking
-                </a>
-                <button
-                  class="navbar-toggler"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#navbarSupportedContent"
-                  aria-controls="navbarSupportedContent"
-                  aria-expanded="false"
-                  aria-label="Toggle navigation"
-                >
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div
-                  class="collapse navbar-collapse "
-                  id="navbarSupportedContent"
-                >
-                  <ul class="navbar-nav ms-auto ">
-                    <li class="nav-item">
-                      <a
-                        class="nav-link"
-                        aria-current="page"
-                        href="#"
-                        style={{ color: "#FFFFFF" }}
-                      >
-                        Pilih Tiket
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#" style={{ color: "#FFFFFF" }}>
-                        Pesan Tiket
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a
-                        class="nav-link active"
-                        href="#"
-                        style={{ color: "#FFFFFF" }}
-                      >
-                        Bayar
-                      </a>
-                    </li>
-                  </ul>
+              <div class="container-fluid row">
+                <div className="col-lg-7">
+                  <a class="navbar-brand" href="#" style={{ color: "#FFFFFF" }}>
+                    Booking
+                  </a>
+                </div>
+                <div className="col-lg-2">
+                <a href="#" className="nav-link" style={{ color: "#FFFFFF" }}>Pilih Tiket</a>
+                </div>
+                <div className="col-lg-2">
+                  <a href="#" className="nav-link" style={{ color: "#FFFFFF" }}>Pesanan Tiket</a>
+                </div>
+                <div className="col-lg-2">
+                  <a href="#" className="nav-link active" style={{ color: "#FFFFFF" }}>Bayar</a>
                 </div>
               </div>
             </nav>

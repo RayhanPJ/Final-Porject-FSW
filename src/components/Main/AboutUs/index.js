@@ -18,7 +18,7 @@ const AboutUs = () => {
           }}
         >
           <div className="card-body">
-            <h2 className="text-light d-flex justify-content-center">
+            <h2 className="text-light d-flex justify-content-center" id="aboutUs">
               About Us
             </h2>
             <hr
