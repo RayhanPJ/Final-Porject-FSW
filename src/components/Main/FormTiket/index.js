@@ -4,6 +4,7 @@ import { Container } from "react-bootstrap";
 
 const FormTiket = () => {
   const [show, setShow] = useState(true);
+
   return (
     <div className="bgForm">
       <main className="py-5 px-5">
@@ -53,6 +54,7 @@ const FormTiket = () => {
               <div className="d-flex">
                 <div className="form-check">
                   <input
+                    show={true}
                     onClick={() => setShow(true)}
                     className="form-check-input"
                     type="radio"
@@ -65,6 +67,7 @@ const FormTiket = () => {
                 </div>
                 <div className="form-check">
                   <input
+                    show={false}
                     onClick={() => setShow(false)}
                     className="form-check-input"
                     type="radio"
@@ -81,7 +84,7 @@ const FormTiket = () => {
               </label>
               <div className="input-group mb-3">
                 <input
-                  show={show}
+                  show={true}
                   type="date"
                   name="date"
                   id="date"
