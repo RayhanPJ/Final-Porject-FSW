@@ -11,6 +11,11 @@ a {
   text-decoration: none;
 }
 
+/* navbar main */
+.list_nav_main{
+  padding-left: 25px !important;
+}
+
 /* Header */
 .bgHeader {
   background-image: url(../public/img/bgHeader.png);
@@ -58,29 +63,26 @@ footer {
 
 .addres {
   color: #ffffff !important;
- 
-  
 }
 
 /* end footer */
 /* mobile 360px */
 @media (max-width: 600px) {
+  /* navbar main */
+  .list_nav_main{
+    padding-left: 0px !important;
+  }
+
   .contain_navbar nav {
     margin-left: 30px;
   }
-
-  /* header */
-  .bgHeader .containC{
-    
-  }
-
-  
 
   .title-prodak h1 {
     width: 248px;
     height: 200px;
     margin-top: 0;
   }
+
   .title-prodak p {
     font-family: Helvetica, sans-serif;
     font-style: normal;
@@ -91,25 +93,34 @@ footer {
     height: 60px;
     align-self: stretch;
   }
+
   .title-prodak .button-order {
     margin: 30px 0 20px 0;
   }
+
   .container .title-image {
     width: 344px;
     height: 199px;
   }
+
   /* layanan */
   .layanan .img-service {
     width: 252px;
     margin: 10px 0 0 30px;
     padding-bottom: 20px;
   }
+
+  /* pesan tiket */
+  .nama_lengkap input{
+    width: 240px !important;
+  }
   /* bayar tiket */
   .bayarTiket .tbayar{
     width: 250px !important;
+    margin-left: 100px !important;
   }
   .bayarTiket .btn_bayar{
-    margin-left: 70px !important;
+    margin-left: 100px !important;
   }
 
   /* pesan tiket */

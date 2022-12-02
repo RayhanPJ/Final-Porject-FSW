@@ -23,39 +23,9 @@ function NavbarHeader() {
 
   const handleClick = () => setLoading(true);
   return (
-    // <Navbar expand="lg">
-    //   <Container>
-    //     <Navbar.Brand className="d-flex align-items-center" href="/">
-    //       <img
-    //         src="img/GoTravel.png"
-    //         className="d-inline-block align-top"
-    //         alt="React Bootstrap logo"
-    //       />
-    //     </Navbar.Brand>
-    //     <Navbar.Toggle />
-    //     <Navbar.Collapse className="justify-content-end">
-    //       <Nav className="ms-auto d-flex align-items-center fs-5">
-    //         <Nav.Link className="text-dark" href="/">Beranda</Nav.Link>
-    //         <Nav.Link className="mx-3 text-dark" href="#features">Book</Nav.Link>
-    //         <Nav.Link className="mx-3 text-dark" href="#pricing">About Us</Nav.Link>
-    //         <Nav.Link className="mx-3 text-dark" href="#pricing">Testimonial</Nav.Link>
-    //         <Nav.Link className="text-dark" href="/login">
-    //           <Button
-    //             size="md"
-    //             variant="secondary"
-    //             disabled={isLoading}
-    //             onClick={!isLoading ? handleClick : null}
-    //           >
-    //             {isLoading ? "Loading…" : "Login"}
-    //           </Button>
-    //         </Nav.Link>
-    //       </Nav>
-    //     </Navbar.Collapse>
-    //   </Container>
-    // </Navbar>
     <>
       {['md'].map((expand) => (
-        <Navbar key={expand} expand={expand} className="mb-3">
+        <Navbar key={expand} expand={expand} className="mb-3 navbar_main">
           <Container>
             <Navbar.Brand href="/">
               <img
@@ -72,15 +42,15 @@ function NavbarHeader() {
             >
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                  Offcanvas
+                  GoTravel
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
-                <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link href="#action1" className="text-dark">Beranda</Nav.Link>
-                  <Nav.Link href="#action2" className="mx-3 text-dark">Books</Nav.Link>
-                  <Nav.Link href="#aboutUs" className="mx-3 text-dark">About Us</Nav.Link>
-                  <Nav.Link href="#aboutUs" className="mx-3 text-dark">Testimonial</Nav.Link>
+                <Nav className="justify-content-end flex-grow-1 pe-3 nav_side_bar">
+                  <Nav.Link href="/" className="text-dark">Beranda</Nav.Link>
+                  <Nav.Link href="/#Booking" className="text-dark list_nav_main">Books</Nav.Link>
+                  <Nav.Link href="/#aboutUs" className="text-dark list_nav_main">About Us</Nav.Link>
+                  <Nav.Link href="/#Testimonial" className="text-dark list_nav_main">Testimonial</Nav.Link>
                   <Nav.Link href="/login" className="text-dark">
                   <Button
                     size="md"

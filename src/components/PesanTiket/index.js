@@ -38,23 +38,15 @@ const PesanTiket = () => {
             </h3>
             <form style={{ borderStyle: "solid", backgroundColor: "#ffffff", borderRadius: "6px",padding: "50px" }}>
               <h3>Data Diri</h3>
-              <div className="col-lg-12">
+              <div className="col-lg-12 nama_lengkap">
                 <label>Nama Lengkap</label>
                 <br />
-                {/* <input
-                  type={"text"}
-                  style={{ width: "200px", backgroundColor: "#ffffff" }}
-                ></input> */}
                 <input type="text" id="nama_lengkap" placeholder="Nama lengkap" className="form-control " style={{width: "300px"}}/>
               </div>
               <div className="row" style={{marginTop: "10px"}}>
                 <div className="col-lg-4">
                   <label>Kursi</label>
                   <br />
-                  {/* <input
-                    type={"text"}
-                    style={{ width: "140px", backgroundColor: "#ffffff" }}
-                  ></input> */}
                   <select className="form-select" id="pilih-driver">
                     <option selected>Pilih Nomer Kursi</option>
                     <option value="1">1</option>
@@ -64,10 +56,6 @@ const PesanTiket = () => {
                 <div className="col-lg-4">
                   <label>Makanan</label>
                   <br />
-                  {/* <input
-                    type={"text"}
-                    style={{ width: "140px", backgroundColor: "#ffff" }}
-                  ></input> */}
                   <select className="form-select" id="pilih-makanan">
                     <option selected>Pilih Tipe Makanan</option>
                     <option value="anak">Anak</option>
