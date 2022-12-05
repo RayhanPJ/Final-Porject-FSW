@@ -5,12 +5,12 @@ import { Container } from "react-bootstrap";
 const FormInfoTiket = () => {
   const [show, setShow] = useState(true);
   return (
-    <div className="bgFormInfo" id="Booking">
+    <div className="bgFormInfo" id="infoTiket">
       <main className="py-5 px-5">
         <Container>
           <div className="parentInfo">
             <div className="divInfo1 d-flex justify-content-center">
-              <h3 className="text-light">Booking</h3>
+              <h3 className="text-light">Info Tiket</h3>
             </div>
             <div className="divInfo2 ">
               <label className="form-label" htmlFor="typeDriver">

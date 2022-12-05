@@ -42,7 +42,7 @@ async function doLogin({ email, password }) {
 //   return data.token;
 // }
 
-function Login() {
+function Register() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -93,11 +93,21 @@ function Login() {
         <div className="row">
           <div className="col-7"></div>
           <div className="col-5">
-            <h2>Masuk</h2>
-            <p>
-              Belum punya akun? <a href="/register">Daftar disini</a>
-            </p>
+            <h2>Register</h2>
             <form onSubmit={handleSubmit}>
+              <div className="mb-3 h6">
+                <label htmlFor="email" className="form-label">
+                  Username
+                </label>
+                <input
+                  type="email"
+                  className="form-control bg-transparent formInput"
+                  id="email"
+                  onChange={(e) => setUsername(e.target.value)}
+                  value={username}
+                  placeholder="your email"
+                />
+              </div>
               <div className="mb-3 h6">
                 <label htmlFor="email" className="form-label">
                   Email address
@@ -134,7 +144,7 @@ function Login() {
                   className="btn btn-light shadow py-2 mb-5 bg-body rounded"
                   type="submit"
                 >
-                  <b>Masuk</b>
+                  <b>Daftar</b>
                 </button>
               </div>
               <p>Atau masuk dengan</p>
@@ -148,4 +158,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Register;

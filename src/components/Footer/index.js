@@ -30,16 +30,16 @@ function Footer() {
           {/* <!-- navigation --> */}
           <div className="col-lg-3">
             <div className="nav_footer">
-              <a href="tes">
+              <a href="#">
                 <p>Beranda</p>
               </a>
-              <a href="tes">
+              <a href="#Booking">
                 <p>Book</p>
               </a>
-              <a href="tes">
+              <a href="#aboutUs">
                 <p>About Us</p>
               </a>
-              <a href="tes">
+              <a href="#Testimonial">
                 <p>Testimonial</p>
               </a>
             </div>

@@ -6,7 +6,7 @@ const FormTiket = () => {
   const [show, setShow] = useState(true);
 
   return (
-    <div className="bgForm">
+    <div className="bgForm" id="Booking">
       <main className="py-5 px-5">
         <Container>
           <div className="parent">
@@ -19,7 +19,7 @@ const FormTiket = () => {
               </a>
             </div>
             <div className="div3 ">
-              <label className="form-label" htmlFor="typeDriver">
+              <label className="form-label" >
                 Dari
               </label>
               <div className="input-group mb-3">
@@ -35,7 +35,7 @@ const FormTiket = () => {
               </div>
             </div>
             <div className="div4">
-              <label className="form-label" htmlFor="typeDriver">
+              <label className="form-label" >
                 Dari
               </label>
               <div className="input-group mb-3">
@@ -83,7 +83,7 @@ const FormTiket = () => {
                   </label>
                 </div>
               </div>
-              <label className="form-label" htmlFor="typeDriver">
+              <label className="form-label">
                 Date :
               </label>
               <div className="input-group mb-3">
@@ -106,7 +106,7 @@ const FormTiket = () => {
               </div>
             </div>
             <div className="div6">
-              <label className="form-label" htmlFor="tipeDriver">
+              <label className="form-label">
                 Penumpang
               </label>
               <input
@@ -118,7 +118,7 @@ const FormTiket = () => {
               />
             </div>
             <div className="div7">
-              <label className="form-label" htmlFor="typeDriver">
+              <label className="form-label" >
                 Class
               </label>
               <div className="input-group mb-3">

@@ -47,10 +47,10 @@ function NavbarHeader() {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3 nav_side_bar">
-                  <Nav.Link href="/" className="text-dark">Beranda</Nav.Link>
-                  <Nav.Link href="/#Booking" className="text-dark list_nav_main">Books</Nav.Link>
-                  <Nav.Link href="/#aboutUs" className="text-dark list_nav_main">About Us</Nav.Link>
-                  <Nav.Link href="/#Testimonial" className="text-dark list_nav_main">Testimonial</Nav.Link>
+                  <Nav.Link href="#" className="text-dark">Beranda</Nav.Link>
+                  <Nav.Link href="#Booking" className="text-dark list_nav_main">Books</Nav.Link>
+                  <Nav.Link href="#aboutUs" className="text-dark list_nav_main">About Us</Nav.Link>
+                  <Nav.Link href="#Testimonial" className="text-dark list_nav_main">Testimonial</Nav.Link>
                   <Nav.Link href="/login" className="text-dark">
                   <Button
                     size="md"
