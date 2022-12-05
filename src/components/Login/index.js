@@ -6,18 +6,21 @@ import Link from "next/link";
 // import { GoogleLogin, GoogleOAuthProvider } from "@react-oauth/google";
 // import jwtDecode from "jwt-decode";
 
-async function doLogin({ email, password }) {
+async function doLogin({ username, password }) {
   // Gunakan endpoint-mu sendiri
-  const response = await fetch("http://localhost:8000/api/v1/login", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      email,
-      password,
-    }),
-  });
+  const response = await fetch(
+    "https://final-project-be-production.up.railway.app/api/v1/login",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        username,
+        password,
+      }),
+    }
+  );
   const data = await response.json();
   return data.token;
 }
@@ -47,6 +50,7 @@ function Login() {
   const [password, setPassword] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  
   // const GOOGLECLIENTID = "1075166577960-qiqbp7khn8e0e50mrgf01hcci3kognqf.apps.googleusercontent.com";
 
   useEffect(() => {
@@ -59,7 +63,8 @@ function Login() {
     e.preventDefault();
     doLogin({ username, password })
       .then((token) => localStorage.setItem("token", token))
-      .catch((err) => err.message);
+      .catch((err) => err.message)
+      .finally(() => setIsLoading(false));
   }
 
   // const haldleSuccessGoogle = (response) => {
@@ -92,56 +97,60 @@ function Login() {
       <Container>
         <div className="row">
           <div className="col-7"></div>
-          <div className="col-5">
-            <h2>Masuk</h2>
-            <p>
-              Belum punya akun? <a href="/register">Daftar disini</a>
-            </p>
-            <form onSubmit={handleSubmit}>
-              <div className="mb-3 h6">
-                <label htmlFor="email" className="form-label">
-                  Email address
-                </label>
-                <input
-                  type="email"
-                  className="form-control bg-transparent formInput"
-                  id="email"
-                  onChange={(e) => setUsername(e.target.value)}
-                  value={username}
-                  placeholder="your email"
-                />
-              </div>
-              <div className="mb-3 h6">
-                <label htmlFor="passwd" className="col-sm-2 col-form-label">
-                  Password
-                </label>
-                <input
-                  type="password"
-                  className="form-control bg-transparent formInput"
-                  id="password"
-                  onChange={(e) => setPassword(e.target.value)}
-                  value={password}
-                  placeholder="your password"
-                />
-              </div>
-              <a href="/" className="forgot">
-                Back to the site
-              </a>
-              <br />
-              <br />
-              <div className="d-grid gap-2">
-                <button
-                  className="btn btn-light shadow py-2 mb-5 bg-body rounded"
-                  type="submit"
-                >
-                  <b>Masuk</b>
-                </button>
-              </div>
-              <p>Atau masuk dengan</p>
-              <div className="d-grid gap-2"></div>
-            </form>
-            <Link href="/"/>
-          </div>
+          {!isLoggedIn ? (
+            <div className="col-5">
+              <h2>Masuk</h2>
+              <p>
+                Belum punya akun? <a href="/register">Daftar disini</a>
+              </p>
+              <form onSubmit={handleSubmit}>
+                <div className="mb-3 h6">
+                  <label htmlFor="email" className="form-label">
+                    Username
+                  </label>
+                  <input
+                    type="email"
+                    className="form-control bg-transparent formInput"
+                    id="email"
+                    onChange={(e) => setUsername(e.target.value)}
+                    value={username}
+                    placeholder="your email"
+                  />
+                </div>
+                <div className="mb-3 h6">
+                  <label htmlFor="passwd" className="col-sm-2 col-form-label">
+                    Password
+                  </label>
+                  <input
+                    type="password"
+                    className="form-control bg-transparent formInput"
+                    id="password"
+                    onChange={(e) => setPassword(e.target.value)}
+                    value={password}
+                    placeholder="your password"
+                  />
+                </div>
+                <a href="/" className="forgot">
+                  Back to the site
+                </a>
+                <br />
+                <br />
+                <div className="d-grid gap-2">
+                  <button
+                    className="btn btn-light shadow py-2 mb-5 bg-body rounded"
+                    type="submit"
+                    value={isLoading ? "Loading" : "Login"}
+                  >
+                    <b>Masuk</b>
+                  </button>
+                </div>
+                <p>Atau masuk dengan</p>
+                <div className="d-grid gap-2"></div>
+              </form>
+            </div>
+          ) : (
+            <Link href="/" />
+          )}
         </div>
       </Container>
     </div>
